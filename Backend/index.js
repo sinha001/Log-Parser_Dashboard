@@ -15,6 +15,12 @@ app.use(cors({
 
 readLogs().then(()=>console.log("Log file Processed!"));
 
+
+app.get('/',(req,res)=>{
+    res.send("<h1>Server is Running<h1/>");
+});
+
+
 app.get("/histogram/ips", (req,res)=>{
     res.json(ipCount);
 });
