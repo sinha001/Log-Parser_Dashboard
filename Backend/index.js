@@ -25,6 +25,7 @@ app.get('/',(req,res)=>{
 
 
 app.get("/histogram/ips", (req,res)=>{
+    console.log("Returning IP Count:", ipCount);
     res.json(ipCount);
 });
 
