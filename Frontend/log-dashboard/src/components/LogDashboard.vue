@@ -68,7 +68,7 @@
 <script>
 import axios from 'axios';
 import { defineComponent, ref, onMounted, nextTick, watch } from 'vue';
-import Chart from 'chart.js/auto';
+import Chart from 'chart.js';
 
 export default defineComponent({
   setup() {
