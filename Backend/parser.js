@@ -1,5 +1,6 @@
 const fs = require("fs");
 const readline = require("readline");
+const axios = require('axios');
 
 const LOG_FILE = "logParserSample.log";
 
@@ -7,13 +8,13 @@ const ipCount = {}; //store Ip occurences
 const traffic = {}; //store hourly traffic..
 
 const readLogs = async () => {
-  const file = fs.createReadStream(LOG_FILE);
-  const readLine = readline.createInterface({
-    input: file,
-    crlfDelay: Infinity,
-  });
+  const response = await axios.get('https://support.netgables.org/apache_combined.log');
+    
+    // Split the file content by new lines
+    const logLines = response.data.split('\n');
 
-  for await (const line of readLine) {
+
+  for await (const line of logLines) {
     // console.log(line);  we are getting each line...
 
     /*
