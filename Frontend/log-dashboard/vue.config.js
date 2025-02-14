@@ -7,5 +7,5 @@ module.exports = {
       }
     }
   },
-  publicPath: '/'  // This is the default for deployments to the root domain
+  publicPath: './'  // This is the default for deployments to the root domain
 };
