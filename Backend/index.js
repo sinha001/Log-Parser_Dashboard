@@ -6,7 +6,7 @@ const {readLogs, ipCount, traffic, getIPS, getTopHours} = require('./parser');
 
 const app = express();
 
-const PORT = process.env.PORT || 5200;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({
     origin:'*',
