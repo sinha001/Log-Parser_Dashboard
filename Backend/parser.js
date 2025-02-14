@@ -48,8 +48,8 @@ const readLogs = async () => {
     traffic[hour] = (traffic[hour] || 0) + 1;
   }
 
-//   console.log("IP Occurences: ", ipCount);
-//   console.log("Hour Traffic: ", traffic);
+   console.log("IP Occurences: ", ipCount);
+   console.log("Hour Traffic: ", traffic);
 
 };
 
