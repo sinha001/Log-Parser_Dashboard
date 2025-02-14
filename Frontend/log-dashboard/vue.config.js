@@ -1,11 +1,13 @@
-module.exports = {
+const { defineConfig } = require('@vue/cli-service');
+
+module.exports = defineConfig({
   transpileDependencies: true,
+  publicPath: '/',  // Set the public path to '/'
   configureWebpack: {
     resolve: {
       alias: {
-        'chart.js': 'chart.js/dist/chart.min.js',
+        'chart.js': 'chart.js/dist/chart.min.js', // Ensure using the minified browser version of chart.js
       }
     }
-  },
-  publicPath: './'  // This is the default for deployments to the root domain
-};
+  }
+});
