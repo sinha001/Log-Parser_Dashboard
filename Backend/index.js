@@ -3,15 +3,18 @@ require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const {readLogs, ipCount, traffic, getIPS, getTopHours} = require('./parser');
+
 const app = express();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5200;
 
 app.use(cors({
     origin:'*',
     methods: ["GET","POST"],
     allowedHeaders:["Content-Type","Authorization"],
 }));
+
+app.use(express.json());
 
 readLogs().then(()=>console.log("Log file Processed!"));
 
