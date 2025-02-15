@@ -3,6 +3,8 @@
 ## Overview
 Log Parser Dashboard is a web application designed to parse and visualize log data efficiently. The project consists of a **Node.js** backend and a **Vue.js** frontend.
 
+#Project Dashboard Link: [Log Parser Dashboard](https://log-parser-dashboard-aywq-git-main-sinha001s-projects.vercel.app/)
+
 ## Features
 - Upload and parse log files
 - Visualize logs with a user-friendly dashboard
